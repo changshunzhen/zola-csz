@@ -1,1 +1,13 @@
 {% extends "base.html" %}
+
+{% block content %}
+  {% for page in paginator.pages %}
+    <div class="my-2">
+      <div class="font-semibold py-2">
+        <a href="{{ page.permalink }}" class="hover:underline">{{ page.title | safe }}</a>
+      </div>
+      <div class="">{{ page.summary | safe }}</div>
+      <div><a href="{{ page.permalink }}" class="hover:underline">Read more...</a></div>
+    </div>
+  {% endfor %}
+{% endblock content %}

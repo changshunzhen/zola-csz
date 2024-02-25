@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="my-2">
+    <div class="font-semibold py-2">{{ page.title | safe }}</div>
+    <div class="">{{ page.content | safe }}</div>
+  </div>
+{% endblock content %}
