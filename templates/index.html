@@ -1,13 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
-  {% for page in paginator.pages %}
-    <div class="my-2">
-      <div class="font-semibold py-2">
+<div class="grid grid-cols-5 gap-4">
+  <div class="col-start-2 col-span-3">
+    {% for page in paginator.pages %}
+    <div class="my-4">
+      <div class="font-semibold py-2 text-xl">
         <a href="{{ page.permalink }}" class="hover:underline">{{ page.title | safe }}</a>
       </div>
       <div class="">{{ page.summary | safe }}</div>
-      <div><a href="{{ page.permalink }}" class="hover:underline">Read more...</a></div>
+      <div class="mt-1">
+        <a href="{{ page.permalink }}" class="hover:underline text-teal-600">
+          Read more...
+        </a>
+      </div>
     </div>
-  {% endfor %}
+    {% endfor %}
+
+    <hr class="my-4"/>
+    <nav class="flex justify-between">
+      {% if paginator.previous %}
+        <a class="hover:underline text-teal-600" href="{{ paginator.previous }}">‹ Previous</a>
+      {% else %}
+        <span>&nbsp;</span>
+      {% endif %}
+
+      {% if paginator.next %}
+        <a class="hover:underline text-teal-600" href="{{ paginator.next }}">Next ›</a>
+      {% else %}
+        <span>&nbsp;</span>
+      {% endif %}
+
+  </nav>
+
+  </div>
+  <div></div>
+</div>
+
 {% endblock content %}

@@ -5,18 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+
+    {% if page %}
+      {% if page.description %}
+      <meta name="description" content="{{ page.description }}" />
+      {% elif config.description %}
+      <meta name="description" content="{{ config.description }}" />
+      {% endif %}
+    {% elif config.description %}
+      <meta name="description" content="{{ config.description }}" />
+    {% endif %}
 </head>
 
 <body>
-    <nav class="container mx-auto bg-slate-300">
-        <ul class="list-none flex justify-center">
-            <li class="p-2">
-                <a href="/" class="hover:underline underline-offset-2">Home</a>
-            <li class="p-2">
-                <a href="/" class="hover:underline underline-offset-2">Tags</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="bg-slate-300">
+        <nav class="container mx-auto ">
+            <ul class="list-none flex justify-center">
+                <li class="p-2">
+                    <a href="/" class="hover:underline underline-offset-2">Home</a>
+                <li class="p-2">
+                    <a href="/" class="hover:underline underline-offset-2">Tags</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <div class="container mx-auto my-4">
         {% block content %}{% endblock content %}
