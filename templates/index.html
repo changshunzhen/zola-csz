@@ -3,13 +3,13 @@
     <div class="col-span-3 col-start-2">
         {% for page in paginator.pages %}
         <div class="my-4">
-            <h1 class="py-2 text-xl font-semibold">
+            <h1 class="title py-2">
                 <a href="{{ page.permalink }}" class="hover:underline"
                     >{{ page.title | safe }}</a
                 >
             </h1>
             <div>{{ page.date | date(format="%F") }}</div>
-            <div class="page-content summary">{{ page.summary | safe }}</div>
+            <div class="page-summary">{{ page.summary | safe }}</div>
             <div class="mt-1">
                 <a
                     href="{{ page.permalink }}"

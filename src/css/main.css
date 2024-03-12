@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1.title {
+  @apply text-2xl font-bold;
+}
+
+.page-content {
+  p {
+    @apply my-2;
+  }
+
+  h2 {
+    @apply py-1 text-xl font-semibold !important;
+  }
+
+  h3 {
+    @apply py-1 text-lg font-semibold !important;
+  }
+
+  h4 {
+    @apply py-1 text-base font-semibold !important;
+  }
+
+  pre {
+    @apply p-1 text-wrap !important;
+  }
+}
+
+
+
+a,
+a:visited {
+  --tw-text-opacity: 1;
+  color: rgb(13 148 136 / var(--tw-text-opacity)) !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  margin-top: 0.3em !important;
+  margin-bottom: 0.3em !important;
+}

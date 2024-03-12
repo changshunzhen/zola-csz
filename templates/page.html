@@ -2,7 +2,7 @@
 <div class="grid grid-cols-5 gap-4">
     <div class="col-span-3 col-start-2">
         <div class="my-4">
-            <h1 class="py-2 text-xl font-semibold">{{ page.title | safe }}</h1>
+            <h1 class="title py-2">{{ page.title | safe }}</h1>
             <div>{{ page.date | date(format="%F") }}</div>
             <div class="page-content">{{ page.content | safe }}</div>
         </div>
