@@ -1,13 +1,12 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="grid grid-cols-5 gap-4">
-  <div class="col-start-2 col-span-3">
-    <div class="my-4">
-      <div class="font-semibold py-2 text-xl">{{ page.title | safe }}</div>
-      <div class="">{{ page.content | safe }}</div>
+    <div class="col-span-3 col-start-2">
+        <div class="my-4">
+            <h1 class="py-2 text-xl font-semibold">{{ page.title | safe }}</h1>
+            <div>{{ page.date | date(format="%F") }}</div>
+            <div class="page-content">{{ page.content | safe }}</div>
+        </div>
     </div>
-  </div>
 </div>
 
 {% endblock content %}
