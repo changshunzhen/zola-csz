@@ -6,13 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/main.css">
-
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     {% if config.generate_feed %}
     <link rel="alternate" type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else
         %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
     {% endif %}
-
     {% if page %}
     {% if page.description %}
     <meta name="description" content="{{ page.description }}" />
@@ -30,9 +28,14 @@
 <body>
     <div class="bg-slate-300">
         <nav class="container mx-auto ">
-            <ul class="list-none flex justify-center">
-                <li class="p-2">
+            <ul class="list-none flex items-center justify-center p-5">
+                <li class="text-2xl font-serif">
                     <a href="/" class="hover:underline underline-offset-2">{{ config.title }}</a>
+                </li>
+
+                <li class="ml-10 font-mono text-sm">
+                    <a href="/tags" class="hover:underline underline-offset-2">Tags</a>
+                </li>
             </ul>
         </nav>
     </div>
