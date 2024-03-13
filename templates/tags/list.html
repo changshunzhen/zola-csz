@@ -1,14 +1,16 @@
 {% extends "base.html" %} {% block content %}
-<div class="grid grid-cols-5 gap-4">
-    <div class="col-span-3 col-start-2">
-        <div class="mb-3">{{ terms | length }} tags in total</div>
-        <div class="grid grid-cols-2 gap-1 md:grid-cols-4">
-            {% for tag in terms %}
-            <a class="text-lg" href="{{ tag.permalink }}">
-                {{ tag.name }}
-                <span class="text-xs">{{ tag.pages | length }}</span>
-            </a>
-            {% endfor %}
+<div class="grid grid-cols-1 gap-4 md:grid-cols-5">
+    <div class="col-span-1 md:col-span-3 md:col-start-2">
+        <div class="m-4">{{ terms | length }} tags in total</div>
+        <div class="m-4">
+            <div class="grid grid-cols-2 gap-1 md:grid-cols-4">
+                {% for tag in terms %}
+                <a class="text-lg" href="{{ tag.permalink }}">
+                    {{ tag.name }}
+                    <span class="text-xs">{{ tag.pages | length }}</span>
+                </a>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>

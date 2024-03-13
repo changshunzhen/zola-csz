@@ -1,8 +1,8 @@
 {% extends "base.html" %} {% block content %}
-<div class="grid grid-cols-5 gap-4">
-    <div class="col-span-3 col-start-2">
+<div class="grid grid-cols-1 gap-4 md:grid-cols-5">
+    <div class="col-span-1 md:col-span-3 md:col-start-2">
         {% for page in paginator.pages %}
-        <div class="my-4">
+        <div class="m-4">
             <h1 class="title py-2">
                 <a href="{{ page.permalink }}" class="hover:underline"
                     >{{ page.title | safe }}</a
@@ -21,26 +21,29 @@
         </div>
         {% endfor %}
 
-        <hr class="my-4" />
-        <nav class="flex justify-between">
-            {% if paginator.previous %}
-            <a
-                class="text-teal-600 hover:underline"
-                href="{{ paginator.previous }}"
-                >‹ Previous</a
-            >
-            {% else %}
-            <span>&nbsp;</span>
-            {% endif %} {% if paginator.next %}
-            <a class="text-teal-600 hover:underline" href="{{ paginator.next }}"
-                >Next ›</a
-            >
-            {% else %}
-            <span>&nbsp;</span>
-            {% endif %}
-        </nav>
+        <hr />
+        <div class="m-4">
+            <nav class="flex justify-between">
+                {% if paginator.previous %}
+                <a
+                    class="text-teal-600 hover:underline"
+                    href="{{ paginator.previous }}"
+                    >‹ Previous</a
+                >
+                {% else %}
+                <span>&nbsp;</span>
+                {% endif %} {% if paginator.next %}
+                <a
+                    class="text-teal-600 hover:underline"
+                    href="{{ paginator.next }}"
+                    >Next ›</a
+                >
+                {% else %}
+                <span>&nbsp;</span>
+                {% endif %}
+            </nav>
+        </div>
     </div>
-    <div></div>
 </div>
 
 {% endblock content %}
