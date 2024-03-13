@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "postcss src/css/main.css -o public/stylesheets/main.css",
-    "dev": "postcss src/css/main.css -o public/stylesheets/main.css -w"
+    "build": "postcss src/css/main.css -o static/stylesheets/main.css",
+    "dev": "postcss src/css/main.css -o static/stylesheets/main.css -w"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.18",
+    "cssnano": "^6.1.0",
     "postcss": "^8.4.35",
     "postcss-cli": "^11.0.0",
     "postcss-nesting": "^12.1.0",
