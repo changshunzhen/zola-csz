@@ -17,6 +17,9 @@
     {% elif config.description %}
     <meta name="description" content="{{ config.description }}" />
     {% endif %}
+
+    {% block extra_head %}
+    {% endblock extra_head %}
 </head>
 
 <body>
