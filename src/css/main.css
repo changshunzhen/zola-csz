@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply font-serif text-gray-900 !important;
+}
+
+a,
+a:visited {
+    --tw-text-opacity: 1;
+    color: #e36414 !important;
+}
+
 h1.title {
     @apply text-2xl font-bold;
 }
@@ -24,14 +34,8 @@ h1.title {
     }
 
     pre {
-        @apply text-wrap break-words p-1 !important;
+        @apply my-2 text-wrap break-words p-1 !important;
     }
-}
-
-a,
-a:visited {
-    --tw-text-opacity: 1;
-    color: rgb(13 148 136 / var(--tw-text-opacity)) !important;
 }
 
 a:hover {

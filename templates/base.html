@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/main.css?v=3">
+    <link rel="stylesheet" href="/stylesheets/main.css?v=4">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     {% if config.generate_feed %}
     <link rel="alternate" type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else
@@ -26,10 +25,10 @@
 </head>
 
 <body>
-    <div class="bg-slate-300">
+    <div class="">
         <nav class="container mx-auto ">
             <ul class="list-none flex items-center justify-center p-5">
-                <li class="text-2xl font-serif">
+                <li class="text-2xl font-mono font-extrabold">
                     <a href="/" class="hover:underline underline-offset-2">{{ config.title }}</a>
                 </li>
 
@@ -39,7 +38,6 @@
             </ul>
         </nav>
     </div>
-
     <div class="container mx-auto my-4">
         {% block content %}{% endblock content %}
     </div>

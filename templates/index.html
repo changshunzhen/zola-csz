@@ -8,15 +8,22 @@
                     >{{ page.title | safe }}</a
                 >
             </h1>
-            <div>{{ page.date | date(format="%F") }}</div>
-            <div class="summary">{{ page.summary | safe }}</div>
-            <div class="mt-1">
-                <a
-                    href="{{ page.permalink }}"
-                    class="text-teal-600 hover:underline"
+            <div>
+                <span class="text-slate-500"
+                    >{{ page.date | date(format="%F") }}</span
                 >
-                    Read more...
-                </a>
+                {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags
+                %}
+                <a
+                    class="mx-1"
+                    href="{{ get_taxonomy_url(kind='tags', name=tag) }}"
+                    >#{{ tag }}</a
+                >
+                {% endfor %} {% endif %}
+            </div>
+            <div class="summary my-2">{{ page.summary | safe }}</div>
+            <div class="mt-1">
+                <a href="{{ page.permalink }}"> Read more... </a>
             </div>
         </div>
         {% endfor %}
@@ -25,19 +32,11 @@
         <div class="m-4">
             <nav class="flex justify-between">
                 {% if paginator.previous %}
-                <a
-                    class="text-teal-600 hover:underline"
-                    href="{{ paginator.previous }}"
-                    >‹ Previous</a
-                >
+                <a href="{{ paginator.previous }}">‹ Previous</a>
                 {% else %}
                 <span>&nbsp;</span>
                 {% endif %} {% if paginator.next %}
-                <a
-                    class="text-teal-600 hover:underline"
-                    href="{{ paginator.next }}"
-                    >Next ›</a
-                >
+                <a href="{{ paginator.next }}">Next ›</a>
                 {% else %}
                 <span>&nbsp;</span>
                 {% endif %}
