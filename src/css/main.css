@@ -6,7 +6,7 @@ h1.title {
     @apply text-2xl font-bold;
 }
 
-.page-content {
+.markdown {
     p {
         @apply my-2;
     }
