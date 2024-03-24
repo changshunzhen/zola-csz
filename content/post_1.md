@@ -1,8 +1,10 @@
 +++
 title = "Post 1"
-date = 2024-01-01
+date = "2024-01-01"
+description = "Here is the description"
 [taxonomies]
 tags=["TagA", "TagB"]
+
 +++
 
 ## Lorem Ipsum

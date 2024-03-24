@@ -10,6 +10,7 @@
     <link rel="alternate" type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else
         %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
     {% endif %}
+    {% block description %}
     {% if page %}
     {% if page.description %}
     <meta name="description" content="{{ page.description }}" />
@@ -19,6 +20,8 @@
     {% elif config.description %}
     <meta name="description" content="{{ config.description }}" />
     {% endif %}
+
+    {% endblock description %}
 
     {% if config.extra.google_analytics_id %}
     <!-- Google tag (gtag.js) -->

@@ -12,4 +12,7 @@
         {% endfor %}
     </div>
 </div>
-{% endblock content %}
+{% endblock content %} {% block title %} {{ term.name }} - {{ config.title }} {%
+endblock title %} {% block description %}
+<meta name="description" content="Pages with tag {{ term.name }}" />
+{% endblock description %}
