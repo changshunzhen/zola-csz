@@ -6,6 +6,10 @@ body {
     @apply text-wrap break-words font-serif text-gray-900 !important;
 }
 
+h1 {
+    @apply text-3xl !important;
+}
+
 a,
 a:visited {
     @apply underline-offset-2 !important;
@@ -25,19 +29,23 @@ h1.title {
     }
 
     h1 {
-        @apply py-1 text-xl font-semibold !important;
+        @apply py-1 text-3xl font-black !important;
     }
 
     h2 {
-        @apply py-1 text-xl font-semibold !important;
+        @apply py-2 text-2xl font-extrabold !important;
     }
 
     h3 {
-        @apply py-1 text-lg font-semibold !important;
+        @apply py-2 text-xl font-bold !important;
     }
 
     h4 {
-        @apply py-1 text-base font-semibold !important;
+        @apply py-2 text-lg font-semibold !important;
+    }
+
+    h5 {
+        @apply py-2 text-base font-semibold !important;
     }
 
     pre {
@@ -50,5 +58,9 @@ h1.title {
 
     ol {
         @apply list-inside list-decimal !important;
+    }
+
+    blockquote {
+        @apply border-s-8 pl-2 text-slate-500 !important;
     }
 }
