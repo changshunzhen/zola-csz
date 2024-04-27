@@ -63,4 +63,26 @@ h1.title {
     blockquote {
         @apply border-s-8 pl-2 text-slate-500 !important;
     }
+
+    table {
+        @apply table-fixed border-collapse border border-slate-400 border-spacing-2 !important;
+
+        thead {
+            @apply bg-slate-100 !important;
+
+            tr {
+                th {
+                    @apply border border-slate-300 p-2;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    @apply border border-slate-300 p-2;
+                }
+            }
+        }
+    }
 }
