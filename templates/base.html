@@ -49,7 +49,11 @@
                 </li>
 
                 <li class="ml-10 font-sans text-sm">
-                    <a href="/tags" class="hover:underline underline-offset-2">Tags</a>
+                    {% if config.extra.navbar %}
+                        {% for item in config.extra.navbar %}
+                        <a href="{{ item.href }}" class="hover:underline underline-offset-2">{{ item.title}}</a>
+                        {% endfor %}
+                    {% endif %}
                 </li>
             </ul>
         </nav>

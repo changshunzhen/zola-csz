@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block content %}
+<div class="grid grid-cols-1 gap-4 md:grid-cols-5">
+    <div class="col-span-1 md:col-span-3 md:col-start-2">
+        {% for page in paginator.pages %}
+        <div class="m-4">
+            <h1 class="title py-2">
+                <a href="{{ page.permalink }}" class="hover:underline"
+                    >{{ page.title | safe }}</a
+                >
+            </h1>
+            <div>
+                <span class="text-slate-500"
+                    >{{ page.date | date(format="%F") }}</span
+                >
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
