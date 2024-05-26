@@ -22,10 +22,12 @@
                 {% endfor %} {% endif %}
             </div>
 
+            {% if page.summary %}
             <div class="markdown summary my-2">{{ page.summary | safe }}</div>
             <div class="mt-1">
                 <a href="{{ page.permalink }}"> Read more... </a>
             </div>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
