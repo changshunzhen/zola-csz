@@ -12,6 +12,19 @@
                 <span class="text-slate-500"
                     >{{ page.date | date(format="%F") }}</span
                 >
+                {% if page.taxonomies.tags %} {% for tag in page.taxonomies.tags
+                %}
+                <a
+                    class="mx-1"
+                    href="{{ get_taxonomy_url(kind='tags', name=tag) }}"
+                    >#{{ tag }}</a
+                >
+                {% endfor %} {% endif %}
+            </div>
+
+            <div class="markdown summary my-2">{{ page.summary | safe }}</div>
+            <div class="mt-1">
+                <a href="{{ page.permalink }}"> Read more... </a>
             </div>
         </div>
         {% endfor %}
