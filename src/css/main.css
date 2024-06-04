@@ -65,7 +65,7 @@ h1.title {
     }
 
     table {
-        @apply table-fixed border-collapse border border-slate-400 border-spacing-2 !important;
+        @apply table-fixed border-collapse border border-slate-400 border-spacing-2 max-w-full !important;
 
         thead {
             @apply bg-slate-100 !important;
