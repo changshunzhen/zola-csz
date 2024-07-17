@@ -29,27 +29,27 @@ h1.title {
     }
 
     h1 {
-        @apply py-1 text-3xl font-black !important;
+        @apply py-2 text-3xl font-black !important;
     }
 
     h2 {
-        @apply py-2 text-2xl font-extrabold !important;
+        @apply py-3 text-2xl font-extrabold !important;
     }
 
     h3 {
-        @apply py-2 text-xl font-bold !important;
+        @apply py-3 text-xl font-bold !important;
     }
 
     h4 {
-        @apply py-2 text-lg font-semibold !important;
+        @apply py-3 text-lg font-semibold !important;
     }
 
     h5 {
-        @apply py-2 text-base font-semibold !important;
+        @apply py-3 text-base font-semibold !important;
     }
 
     pre {
-        @apply my-2 text-wrap break-words p-1 !important;
+        @apply my-2 text-wrap break-words p-2 !important;
     }
 
     ul {
@@ -84,5 +84,11 @@ h1.title {
                 }
             }
         }
+    }
+}
+
+p {
+    code {
+        @apply bg-slate-100 px-1;
     }
 }
