@@ -1,7 +1,9 @@
 +++
 title = "Post 1"
 date = "2024-01-01"
-description = "Here is the description"
+description = "Here is the very description"
+[extra]
+keywords = "Lorem Ipsum"
 [taxonomies]
 tags=["TagA", "TagB"]
 
