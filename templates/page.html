@@ -1,6 +1,9 @@
 {% extends "base.html" %} {% block content %}
 <div class="grid grid-cols-1 gap-4 md:grid-cols-5">
-    <div class="col-span-1 md:col-span-3 md:col-start-2">
+    <div class="col-span-1 m-4 md:col-span-1">
+        {% block left_sidebar %} {% endblock left_sidebar %}
+    </div>
+    <div class="col-span-1 md:col-span-3">
         <div class="m-4">
             <h1 class="title py-2">{{ page.title | safe }}</h1>
             <div>
@@ -39,23 +42,8 @@
         </div>
     </div>
 
-    <div id="sidebar" class="m-4">
-        {% block sidebar %}
-        <div class="p-2 mb-4 bg-yellow-50">
-            <div class="text-lg">title</div>
-            <div>this is the border</div>
-        </div>
-
-        <div class="p-2 mb-4 bg-emerald-100">
-            <div class="text-lg">title</div>
-            <div>this is the border</div>
-        </div>
-
-        <div class="p-2 mb-4 bg-rose-100">
-            <div class="text-lg">title</div>
-            <div>this is the border</div>
-        </div>
-        {% endblock sidebar %}
+    <div class="col-span-1 m-4">
+        {% block right_sidebar %} {% endblock right_sidebar %}
     </div>
 </div>
 
