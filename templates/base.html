@@ -36,26 +36,28 @@
 </head>
 
 <body>
-    <div class="">
-        <nav class="container mx-auto ">
-            <ul class="list-none flex items-center justify-center p-5">
-                <li class="text-2xl font-sans font-bold">
-                    <a href="/">{{ config.title }}</a>
-                </li>
+    <nav class="container mx-auto ">
+        <ul class="list-none flex items-center justify-center p-5">
+            <li class="text-2xl font-sans font-bold">
+                <a href="/">{{ config.title }}</a>
+            </li>
 
-                <li class="ml-10 font-sans text-sm">
-                    {% if config.extra.navbar %}
-                        {% for item in config.extra.navbar %}
-                        <a href="{{ item.href }}" class="hover:underline underline-offset-2">{{ item.title}}</a>
-                        {% endfor %}
-                    {% endif %}
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="container mx-auto my-4">
+            <li class="ml-10 font-sans text-sm">
+                {% if config.extra.navbar %}
+                    {% for item in config.extra.navbar %}
+                    <a href="{{ item.href }}" class="hover:underline underline-offset-2">{{ item.title}}</a>
+                    {% endfor %}
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+    <main class="container mx-auto my-4">
         {% block content %}{% endblock content %}
-    </div>
+    </main>
+    
+    <footer>
+        {% block footer %}{% endblock footer %}
+    </footer>
 </body>
 
 </html>
