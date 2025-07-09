@@ -49,8 +49,7 @@ h1.title {
     }
 
     pre {
-        @apply my-2 text-wrap break-words p-2 !important;
-        white-space: pre-wrap !important;
+        @apply my-2 break-words p-2 overflow-x-auto overflow-y-hidden !important;
     }
 
     ul {
