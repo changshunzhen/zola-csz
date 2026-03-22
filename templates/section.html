@@ -1,5 +1,8 @@
 {% extends "base.html" %} {% block content %}
 <div class="grid grid-cols-1 gap-4 md:grid-cols-5">
+    <div class="col-span-1 m-4 md:col-span-1">
+        {% block left_sidebar %} {% endblock left_sidebar %}
+    </div>
     <div class="col-span-1 md:col-span-3 md:col-start-2">
         {% for page in paginator.pages %}
         <div class="m-4">
@@ -45,6 +48,10 @@
                 {% endif %}
             </nav>
         </div>
+    </div>
+
+    <div class="col-span-1 m-4">
+        {% block right_sidebar %} {% endblock right_sidebar %}
     </div>
 </div>
 
