@@ -30,6 +30,21 @@
             {% endif %}
         </div>
         {% endfor %}
+
+        <hr />
+        <div class="m-4">
+            <nav class="flex justify-between">
+                {% if paginator.previous %}
+                <a href="{{ paginator.previous }}">‹ Previous</a>
+                {% else %}
+                <span>&nbsp;</span>
+                {% endif %} {% if paginator.next %}
+                <a href="{{ paginator.next }}">Next ›</a>
+                {% else %}
+                <span>&nbsp;</span>
+                {% endif %}
+            </nav>
+        </div>
     </div>
 </div>
 
