@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8e4f34f2149bdc07649ad5f6850d1453993d3daa",
+  "prompts": {},
+  "humans": {
+    "h_f49d52fcc53581": {
+      "author": "Yuan Zhang <zhangyuan@users.noreply.github.com>"
+    }
+  }
+}
